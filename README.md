@@ -13,7 +13,7 @@ _This application will ask user a series of question. First Question is: "Input 
 * _This applicaation is stored on GitHub for each access. There are a couple things you must first do to access it.
 
   1. Open your terminal on your device. Make sure that it has the Git Library installed on it.
-  2. Once complete type in "cd ~"" to get into your home directory.
+  2. Once complete type in "cd ~" to get into your home directory.
   3. Next type in "cd Desktop" to get to your desktop directory.
   4. Now we need to clone this project from the GitHub repository. To do that type in "git clone https://github.com/ngwessels/imSorryDave"
   5. Now go into the directory by typing "cd I-m-Sorry-Dave"
