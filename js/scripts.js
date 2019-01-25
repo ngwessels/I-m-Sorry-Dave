@@ -57,14 +57,19 @@ function spliting(number) {
     neither(number);
   }
 }
+
+
+
+
+
 $(document).ready(function() {
   $("form#form").submit(function(event) {
     var input = parseInt($("input#inputNumber").val());
     name = $("#name").val();
     var direction = $("#direction").val();
-    // If statement will check to see if there was a input.
+    // If statements will check to see if there was a input.
     if(input) {
-      if(input > 0) {
+      if(input >= 0) {
         if(name) {
           if(direction == "Smallest to Greatest") {
             var numberArray = [];
@@ -96,8 +101,8 @@ $(document).ready(function() {
           $("#result").text("I'm sorry but it doesnt appear you enter your name. Please reload page and try again");
         }
       } else {
-        // If Negative Number was input
-        $("#result").text("I'm sorry, but it appears you enterd a negative number. All numbers must be greater than zero. Try again!");
+        // If Negative Number or 0 was input
+        $("#result").text("I'm sorry, but it appears you enterd a negative number or ZERO. All numbers must be greater than zero. Try again!");
       }
     } else {
       // IF number was not input
