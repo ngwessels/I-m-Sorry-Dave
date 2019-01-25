@@ -22,7 +22,6 @@ function divi3(input) {
 }
 
 function spliting(number) {
-  debugger;
   // For numbers divisible by 3
   var isDivi = 0;
   if ((number % 3) == 0 && number != 0) {
@@ -66,6 +65,7 @@ $(document).ready(function() {
   $("form#form").submit(function(event) {
     var input = parseInt($("input#inputNumber").val());
     name = $("#name").val();
+
     var direction = $("#direction").val();
     // If statements will check to see if there was a input.
     if(input) {
