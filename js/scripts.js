@@ -10,12 +10,23 @@ function isTwo() {
   text = text + "Boop!, ";
 }
 function isThree() {
-  text = text + "I'm sorry, " + name + ". I'm afraid I can't do that., "
+  text = text + "I'm sorry, Dave. I'm afraid I can't do that., ";
 }
 function neither(input) {
   text = text + input + ", ";
 }
+
+// For numbers divisible by 3
+function divi3(input) {
+  text = text + "I'm sorry, " + name + ". I'm afraid I can't do that., ";
+}
+
 function spliting(number) {
+  debugger;
+  var isDivi = 0;
+  if ((number % 3) == 0 && number != 0) {
+    isDivi = 1;
+  }
   var string = number.toString();
   var newNumber = string.split("");
   var numberLength = number.toString().length;;
@@ -33,13 +44,15 @@ function spliting(number) {
       haveThree = 1;
     }
   }
-  if (haveThree == 1) {
+  if (isDivi == 1) {
+    divi3(number);
+  }else if (haveThree == 1) {
     isThree();
   } else if (haveTwo == 1) {
     isTwo();
   }else if(haveOne == 1) {
     isOne();
-  } else {
+  } else if(isDivi != 1){
     neither(number);
   }
 }
