@@ -59,8 +59,6 @@ function spliting(number) {
 }
 $(document).ready(function() {
   $("form#form").submit(function(event) {
-    var audio = $("#audio")[0];
-    audio.play();
     var input = parseInt($("input#inputNumber").val());
     name = $("#name").val();
     var direction = $("#direction").val();
