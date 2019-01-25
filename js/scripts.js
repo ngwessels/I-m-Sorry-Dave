@@ -47,19 +47,32 @@ $(document).ready(function() {
   $("form#form").submit(function(event) {
     var input = parseInt($("input#inputNumber").val());
     name = $("#name").val();
-    $("#result").text("");
+    var direction = $("#direction").val();
     // If statement will check to see if there was a input.
     if(input) {
       if(name) {
-        var numberArray = [];
-        for(var a = 0; a <= input; a++) {
-          numberArray[a] = a;
+        if(direction == "Smallest to Greatest") {
+          var numberArray = [];
+          for(var a = 0; a <= input; a++) {
+            numberArray[a] = a;
+          }
+          var arrayLength = numberArray.length;
+          for(var a = 0; a < arrayLength; a++) {
+            var b = numberArray[a].toString();
+            spliting(b);
+          }
+        } else {
+          var numberArray = [];
+          for(var a = 0; a <= input; a++) {
+            numberArray[a] = a;
+          }
+          var arrayLength = numberArray.length - 1;
+          var i = 0;
+          for(var a = arrayLength; a >= i; a--) {
+            var b = numberArray[a].toString();
+            spliting(b);
         }
-        var arrayLength = numberArray.length;
-        for(var a = 0; a < arrayLength; a++) {
-          var b = numberArray[a].toString();
-          spliting(b);
-        }
+      }
         // Will return results to HTML
         $("#result").text(text);
       } else {
