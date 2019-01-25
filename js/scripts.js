@@ -1,5 +1,5 @@
 
-// Variable set to global scope so that any function can effect it without calling upon another function to store.
+// Variables set to global scope so that any function can effect it without calling upon another function to store.
 var name = "";
 var text = "";
 function isOne() {
@@ -23,6 +23,7 @@ function divi3(input) {
 
 function spliting(number) {
   debugger;
+  // For numbers divisible by 3
   var isDivi = 0;
   if ((number % 3) == 0 && number != 0) {
     isDivi = 1;
@@ -91,9 +92,11 @@ $(document).ready(function() {
           // Will return results to HTML
           $("#result").text(text);
         } else {
+          // If Name was not input
           $("#result").text("I'm sorry but it doesnt appear you enter your name. Please reload page and try again");
         }
       } else {
+        // If Negative Number was input
         $("#result").text("I'm sorry, but it appears you enterd a negative number. All numbers must be greater than zero. Try again!");
       }
     } else {
