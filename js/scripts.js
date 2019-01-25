@@ -62,19 +62,22 @@ function spliting(number) {
 $(document).ready(function() {
   $("form#form").submit(function(event) {
     var input = parseInt($("input#inputNumber").val());
-    var numberArray = [];
+    if(input) {
+      var numberArray = [];
 
-    for(var a = 0; a <= input; a++) {
-      numberArray[a] = a;
-    }
-    var arrayLength = numberArray.length;
-    for(var a = 0; a < arrayLength; a++) {
-      var b = numberArray[a].toString();
-      spliting(b);
-    }
-    alert(text);
+      for(var a = 0; a <= input; a++) {
+        numberArray[a] = a;
+      }
+      var arrayLength = numberArray.length;
+      for(var a = 0; a < arrayLength; a++) {
+        var b = numberArray[a].toString();
+        spliting(b);
+      }
+      $("#result").text(text);
+    } else {
+      $("#result").text("Im sorry. But it doesnt appear that you entered any number. Please refresh page and enter number and than press submit!. Thankyou!");
+  }
     event.preventDefault(event);
-
 
 
   });
