@@ -1,9 +1,7 @@
+
+// Variable set to global scope so that any function can effect it without calling upon another function to store.
 var text = "";
-
-
-
 function isOne() {
-
   text = text + "Beep!, ";
 }
 
@@ -16,19 +14,13 @@ function isThree() {
 function neither(input) {
   text = text + input + ", ";
 }
-
-
-
 function spliting(number) {
-  debugger;
   var string = number.toString();
   var newNumber = string.split("");
-
   var numberLength = number.toString().length;;
   var haveOne = 0;
   var haveTwo = 0;
   var haveThree = 0;
-
   for (var a = 0; a < numberLength; a++) {
     if (newNumber[a] == 1) {
       haveOne = 1;
@@ -50,21 +42,12 @@ function spliting(number) {
     neither(number);
   }
 }
-
-
-
-
-
-
-
-
-
 $(document).ready(function() {
   $("form#form").submit(function(event) {
     var input = parseInt($("input#inputNumber").val());
+    // If statement will check to see if there was a input.
     if(input) {
       var numberArray = [];
-
       for(var a = 0; a <= input; a++) {
         numberArray[a] = a;
       }
@@ -73,12 +56,13 @@ $(document).ready(function() {
         var b = numberArray[a].toString();
         spliting(b);
       }
+      // Will return results to HTML
       $("#result").text(text);
     } else {
-      $("#result").text("Im sorry. But it doesnt appear that you entered any number. Please refresh page and enter number and than press submit!. Thankyou!");
+      // IF number was not input
+      $("#result").text("Im sorry. But it doesn't appear that you entered any number. Please refresh page and enter number and than press submit!. Thankyou!");
   }
     event.preventDefault(event);
-
 
   });
 });

@@ -1,0 +1,29 @@
+body {
+  background-image: url("../imgs/Dave.png");
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.text {
+  color: lightgrey;
+}
+
+div {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+}
+
+p {
+  color: lightgrey;
+}
