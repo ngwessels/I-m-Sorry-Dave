@@ -2,10 +2,10 @@
 // Variables set to global scope so that any function can effect it without calling upon another function to store.
 var name = "";
 var text = "";
+
 function isOne() {
   text = text + "Beep!, ";
 }
-
 function isTwo() {
   text = text + "Boop!, ";
 }
@@ -15,12 +15,10 @@ function isThree() {
 function neither(input) {
   text = text + input + ", ";
 }
-
 // For numbers divisible by 3
 function divi3(input) {
   text = text + "I'm sorry, " + name + ". I'm afraid I can't do that., ";
 }
-
 function spliting(number) {
   // For numbers divisible by 3
   var isDivi = 0;
@@ -65,7 +63,6 @@ $(document).ready(function() {
   $("form#form").submit(function(event) {
     var input = parseInt($("input#inputNumber").val());
     name = $("#name").val();
-
     var direction = $("#direction").val();
     // If statements will check to see if there was a input.
     if(input) {
