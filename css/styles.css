@@ -3,16 +3,16 @@ body {
   width: 100%;
   height: auto;
 }
-
+/* Title */
 h1 {
   color: white;
   text-align: center;
 }
-
+/* Label Text */
 .text {
   color: lightgrey;
 }
-
+/* Centering Forms */
 div {
   width: 50%;
   display: block;
@@ -23,7 +23,7 @@ button {
   display: block;
   margin: 0 auto;
 }
-
+/* Result Text color */
 p {
   color: lightgrey;
 }
