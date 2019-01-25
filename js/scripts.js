@@ -1,5 +1,6 @@
 
 // Variable set to global scope so that any function can effect it without calling upon another function to store.
+var name = "";
 var text = "";
 function isOne() {
   text = text + "Beep!, ";
@@ -9,7 +10,7 @@ function isTwo() {
   text = text + "Boop!, ";
 }
 function isThree() {
-  text = text + "I'm sorry, Dave. I'm agraid I can't do that., "
+  text = text + "I'm sorry, " + name + ". I'm afraid I can't do that., "
 }
 function neither(input) {
   text = text + input + ", ";
@@ -45,19 +46,25 @@ function spliting(number) {
 $(document).ready(function() {
   $("form#form").submit(function(event) {
     var input = parseInt($("input#inputNumber").val());
+    name = $("#name").val();
+    $("#result").text("");
     // If statement will check to see if there was a input.
     if(input) {
-      var numberArray = [];
-      for(var a = 0; a <= input; a++) {
-        numberArray[a] = a;
+      if(name) {
+        var numberArray = [];
+        for(var a = 0; a <= input; a++) {
+          numberArray[a] = a;
+        }
+        var arrayLength = numberArray.length;
+        for(var a = 0; a < arrayLength; a++) {
+          var b = numberArray[a].toString();
+          spliting(b);
+        }
+        // Will return results to HTML
+        $("#result").text(text);
+      } else {
+        $("#result").text("I'm sorry but it doesnt appear you enter your name. Please reload page and try again");
       }
-      var arrayLength = numberArray.length;
-      for(var a = 0; a < arrayLength; a++) {
-        var b = numberArray[a].toString();
-        spliting(b);
-      }
-      // Will return results to HTML
-      $("#result").text(text);
     } else {
       // IF number was not input
       $("#result").text("Im sorry. But it doesn't appear that you entered any number. Please refresh page and enter number and than press submit!. Thankyou!");
