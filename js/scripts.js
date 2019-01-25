@@ -50,33 +50,38 @@ $(document).ready(function() {
     var direction = $("#direction").val();
     // If statement will check to see if there was a input.
     if(input) {
-      if(name) {
-        if(direction == "Smallest to Greatest") {
-          var numberArray = [];
-          for(var a = 0; a <= input; a++) {
-            numberArray[a] = a;
+      if(input > 0) {
+        if(name) {
+          if(direction == "Smallest to Greatest") {
+            var numberArray = [];
+            for(var a = 0; a <= input; a++) {
+              numberArray[a] = a;
+            }
+            var arrayLength = numberArray.length;
+            for(var a = 0; a < arrayLength; a++) {
+              var b = numberArray[a].toString();
+              spliting(b);
+            }
+          } else {
+            // Reversed. Will run it the opposite direction
+            var numberArray = [];
+            for(var a = 0; a <= input; a++) {
+              numberArray[a] = a;
+            }
+            var arrayLength = numberArray.length - 1;
+            var i = 0;
+            for(var a = arrayLength; a >= i; a--) {
+              var b = numberArray[a].toString();
+              spliting(b);
           }
-          var arrayLength = numberArray.length;
-          for(var a = 0; a < arrayLength; a++) {
-            var b = numberArray[a].toString();
-            spliting(b);
-          }
-        } else {
-          var numberArray = [];
-          for(var a = 0; a <= input; a++) {
-            numberArray[a] = a;
-          }
-          var arrayLength = numberArray.length - 1;
-          var i = 0;
-          for(var a = arrayLength; a >= i; a--) {
-            var b = numberArray[a].toString();
-            spliting(b);
         }
-      }
-        // Will return results to HTML
-        $("#result").text(text);
+          // Will return results to HTML
+          $("#result").text(text);
+        } else {
+          $("#result").text("I'm sorry but it doesnt appear you enter your name. Please reload page and try again");
+        }
       } else {
-        $("#result").text("I'm sorry but it doesnt appear you enter your name. Please reload page and try again");
+        $("#result").text("I'm sorry, but it appears you enterd a negative number. All numbers must be greater than zero. Try again!");
       }
     } else {
       // IF number was not input
