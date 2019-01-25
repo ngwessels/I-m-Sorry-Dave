@@ -31,32 +31,24 @@ function spliting(number) {
 
   for (var a = 0; a < numberLength; a++) {
     if (newNumber[a] == 1) {
-      haveOne = "1";
-      haveTwo = "0";
-      haveThree = "0";
+      haveOne = 1;
     }
     if (newNumber[a] == 2) {
-      haveOne = "0";
-      haveTwo = "1";
-      haveThree = "0";
+      haveTwo = 1;
     }
     if (newNumber[a] == 3) {
-      haveOne = "0";
-      haveTwo = "0";
-      haveThree = "1";
+      haveThree = 1;
     }
   }
-  if (haveOne == 1) {
-    isOne();
-  }else if (haveTwo == 1) {
-    isTwo();
-  }else if(haveThree == 1) {
+  if (haveThree == 1) {
     isThree();
-  }else if(haveOne != 1 && haveTwo != 1 && haveThree != 1) {
+  } else if (haveTwo == 1) {
+    isTwo();
+  }else if(haveOne == 1) {
+    isOne();
+  } else {
     neither(number);
   }
-
-
 }
 
 
