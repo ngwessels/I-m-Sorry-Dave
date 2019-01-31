@@ -10,13 +10,14 @@
   1. Input a number that is greater than zero.
   2. What is your Name?
   3. What direction? Forward or Reverse?_
-* _After each question is answered the user will be prompted to press the "Submit" Button. After Submit button is pressed a function will be called within the Javascript that will do some of the following things:
+* _After each question is answered the user will be prompted to press the "Submit" Button. After Submit button is pressed a function will be called within the Javascript that will do some of the following:
   1. Create an array of numbers. And in the array it will add every number between zero and the number entered by user.
-  2. For numbers that contain the number "1". It will replace the number with text "Beep!".
-  3. For numbers that contain the number "2". It will replace the number with the text "Boop!".
-  4. For numbers that contain the number "3". It will replace the number with the text "I'm sorry, Dave. I'm afraid I can't do that."
-  5. For Numbers in the array of numbers the function will replace all numbers divisible by 3 with "I'm Sorry,(What name user inputted). I'm afraid I can't do that".
-  6. It will prioritize certain parts of the above differently. If a number is divisible by 3 it will always say "I'm Sorry,(What name user inputted). I'm afraid I can't do that". If the number is not divisible by 3 than it moves to the next. If the number contains the number 3 it will result in "I'm sorry Dave. I'm afraid I can't do that". And than will move to numbers containing 2. And than numbers containing 1._
+  2. It will than determine if the order should be Forward or Reverse. Forward starts with 0. And Reverse starts with number user inputted.
+  3. For numbers that contain the number "1". It will replace the number with text "Beep!".
+  4. For numbers that contain the number "2". It will replace the number with the text "Boop!".
+  5. For numbers that contain the number "3". It will replace the number with the text "I'm sorry, Dave. I'm afraid I can't do that."
+  6. For Numbers in the array of numbers the function will replace all numbers divisible by 3 with "I'm Sorry,(What name user inputted). I'm afraid I can't do that".
+  7. It will prioritize certain parts of the above differently. If a number is divisible by 3 it will always say "I'm Sorry,(What name user inputted). I'm afraid I can't do that". If the number is not divisible by 3 than it moves to the next. If the number contains the number 3 it will result in "I'm sorry Dave. I'm afraid I can't do that". And than will move to numbers containing 2. And than numbers containing 1._
 
 ## Setup/Installation Requirements
 
