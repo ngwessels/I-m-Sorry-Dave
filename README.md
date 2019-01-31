@@ -9,8 +9,8 @@
 * _The Main functionality of this application is to take a set of inputs from user and return something different based of the users inputs. Some of the questions will include:
   1. Input a number that is greater than zero.
   2. What is your Name?
-  3. What direction? Forward or Reverse?
-After each question is answered the user will be prompted to press the "Submit" Button. After Submit button is pressed a function will be called within the Javascript that will do some of the following things:
+  3. What direction? Forward or Reverse?_
+* _After each question is answered the user will be prompted to press the "Submit" Button. After Submit button is pressed a function will be called within the Javascript that will do some of the following things:
   1. Create an array of numbers. And in the array it will add every number between zero and the number entered by user.
   2. For numbers that contain the number "1". It will replace the number with text "Beep!".
   3. For numbers that contain the number "2". It will replace the number with the text "Boop!".
