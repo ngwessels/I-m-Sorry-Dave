@@ -1,25 +1,26 @@
 
-// Variables set to global scope so that any function can effect it without calling upon another function to store.
-var name = "";
-var text = "";
-
-function isOne() {
+function isOne(text) {
   text = text + "Beep!, ";
+  return text;
 }
-function isTwo() {
+function isTwo(text) {
   text = text + "Boop!, ";
+  return text;
 }
-function isThree() {
+function isThree(text) {
   text = text + "I'm sorry, Dave. I'm afraid I can't do that., ";
+  return text;
 }
-function neither(input) {
+function neither(input, text) {
   text = text + input + ", ";
+  return text;
 }
 // For numbers divisible by 3
-function divi3(input) {
+function divi3(input, text, name) {
   text = text + "I'm sorry, " + name + ". I'm afraid I can't do that., ";
+  return text;
 }
-function spliting(number) {
+function spliting(number, text, name) {
   // For numbers divisible by 3
   var isDivi = 0;
   if ((number % 3) == 0 && number != 0) {
@@ -43,16 +44,18 @@ function spliting(number) {
     }
   }
   if (isDivi == 1) {
-    divi3(number);
+    text = divi3(number, text, name);
   }else if (haveThree == 1) {
-    isThree();
+    text = isThree(text);
   } else if (haveTwo == 1) {
-    isTwo();
+    text = isTwo(text);
   }else if(haveOne == 1) {
-    isOne();
+    text = isOne(text);
   } else if(isDivi != 1){
-    neither(number);
+    text = neither(number, text);
   }
+  return text;
+
 }
 
 
@@ -61,6 +64,8 @@ function spliting(number) {
 
 $(document).ready(function() {
   $("form#form").submit(function(event) {
+    var name = "";
+    var text = "";
     var input = parseInt($("input#inputNumber").val());
     name = $("#name").val();
     var direction = $("#direction").val();
@@ -68,7 +73,7 @@ $(document).ready(function() {
     if(input) {
       if(input >= 0) {
         if(name) {
-          if(direction == "Smallest to Greatest") {
+          if(direction == "Forward") {
             var numberArray = [];
             for(var a = 0; a <= input; a++) {
               numberArray[a] = a;
@@ -76,7 +81,7 @@ $(document).ready(function() {
             var arrayLength = numberArray.length;
             for(var a = 0; a < arrayLength; a++) {
               var b = numberArray[a].toString();
-              spliting(b);
+              text = spliting(b, text, name);
             }
           } else {
             // Reversed. Will run it the opposite direction
@@ -88,7 +93,7 @@ $(document).ready(function() {
             var i = 0;
             for(var a = arrayLength; a >= i; a--) {
               var b = numberArray[a].toString();
-              spliting(b);
+              text = spliting(b, text, name);
           }
         }
           // Will return results to HTML

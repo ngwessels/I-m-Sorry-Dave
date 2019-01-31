@@ -6,7 +6,17 @@
 
 ## Description
 
-_This application will ask user a series of question. First Question is: "Input a Number. Greater than Zero". If the user does type in a negative number or zero it will inform the user to retry. Next Question asks the user to input their name. And the last question is the direction of how it counts numbers. Smallest to Greatest or Greatest to Smallest. Once the user presses the submit button the application will first check to see if there is any input missing, if so it will alert the user. Than it will put every number between 0 and user inputted number into an array. Once complete it will than determine the direction at which it should look at each number. If direction is Smallest to Greatest it will start at 0 and pass it to a function where it will check the number to see if the number contains any "1's, 2's, 3's or is divisible by 3". If they do contain any of those numbers it will input text into a string that matches what the assignment has asked of it. If it doesnt not contain any of those numbers it will display the number. If the Direction is Greatest to Smallest it will start with the user inputted number and work its way down to 0. After each scenario the application will than display the text on the screen. https://ngwessels.github.io/imSorryDave/. The link above will take you to the GitHub Pages website to see this run live._
+* _The Main functionality of this application is to take a set of inputs from user and return something different based of the users inputs. Some of the questions will include:
+  1. Input a number that is greater than zero.
+  2. What is your Name?
+  3. What direction? Forward or Reverse?
+After each question is answered the user will be prompted to press the "Submit" Button. After Submit button is pressed a function will be called within the Javascript that will do some of the following things:
+  1. Create an array of numbers. And in the array it will add every number between zero and the number entered by user.
+  2. For numbers that contain the number "1". It will replace the number with text "Beep!".
+  3. For numbers that contain the number "2". It will replace the number with the text "Boop!".
+  4. For numbers that contain the number "3". It will replace the number with the text "I'm sorry, Dave. I'm afraid I can't do that."
+  5. For Numbers in the array of numbers the function will replace all numbers divisible by 3 with "I'm Sorry,(What name user inputted). I'm afraid I can't do that".
+  6. It will prioritize certain parts of the above differently. If a number is divisible by 3 it will always say "I'm Sorry,(What name user inputted). I'm afraid I can't do that". If the number is not divisible by 3 than it moves to the next. If the number contains the number 3 it will result in "I'm sorry Dave. I'm afraid I can't do that". And than will move to numbers containing 2. And than numbers containing 1._
 
 ## Setup/Installation Requirements
 
