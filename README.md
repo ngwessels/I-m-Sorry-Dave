@@ -21,7 +21,7 @@
 
 ## Setup/Installation Requirements
 
-* _This applicaation is stored on GitHub for each access. There are a couple things you must first do to access it.
+* _This application is stored on GitHub for each access. There are a couple things you must first do to access it.
 
   1. Open your terminal on your device. Make sure that it has the Git Library installed on it.
   2. Once complete type in "cd ~" to get into your home directory.
